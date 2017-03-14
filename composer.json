@@ -1,0 +1,21 @@
+{
+    "name": "lvht/udplog",
+    "authors": [
+        {
+            "name": "吕海涛",
+            "email": "git@lvht.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Lvht\\": "./src"
+        }
+    },
+    "provide": {
+        "psr/log-implementation": "1.0.0"
+    },
+    "require": {
+        "php": "^7.0",
+        "psr/log": "^1.0"
+    }
+}
