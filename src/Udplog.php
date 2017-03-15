@@ -59,7 +59,7 @@ class Udplog implements LoggerInterface
 
         $msg = sprintf("<%d>1 %s %s %s %s %s - \xEF\xBB\xBF%s|%s", $prival, $timestamp,
             $this->hostname, $this->appname, $this->procid, $this->msgid,
-            $message, json_encode($context));
+            $message, json_encode($context, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE));
 
         socket_sendto($this->sock, $msg, strlen($msg), 0, $this->addr, $this->port);
     }
